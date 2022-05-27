@@ -54,7 +54,7 @@
         $result = execute_sql($link,"Portfolio_2",$sql);
         
         $total_text = mysqli_num_rows($result);
-        $total_page = ($total_text / $page_count) + 1;
+        $total_page = ceil($total_text / $page_count);
         
         $start_text = $page_count * ($page-1);
         
